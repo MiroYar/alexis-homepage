@@ -1,0 +1,41 @@
+@import '../../common.mixins/anim_interaction-effect.scss';
+@import '../../common.mixins/anim_label-effect.scss';
+
+.#{$textarea004} {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.#{$textarea004}__label {
+    border-radius: 4px;
+    background: #ffffff;
+    font-weight: 400;
+    color: #616161;
+    transform: translateX(-50%);
+}
+
+.#{$textarea004}__field {
+    @include label-effect(50px, center, 1px, 26px, 16px, transform 0.2s ease-in){
+        transform: translate(-50%, -115%);
+        text-decoration: underline;
+    };
+    box-sizing: border-box;
+    resize: none;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 4.0px;
+    background:  #ffffff;
+    border: 1.0px solid #efefef;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #616161;
+
+    transition: box-shadow 0.2s ease-in-out;
+    @include interaction-effect(true, true,
+        (box-shadow: 0 0 5px 0 rgba(#fc5f45, 1)),
+        (box-shadow: 0 0 5px 0 rgba(#fc5f45, 1)),
+        (box-shadow: 0 0 3px 0 rgba(#38c695, 1))
+    );
+}

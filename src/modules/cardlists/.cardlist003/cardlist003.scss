@@ -1,0 +1,25 @@
+.#{$cardlist003} {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 30px;
+    max-width: 1140px;
+    padding: 0;
+    list-style: none;
+}
+
+.#{$cardlist003}__item {
+    &:nth-child(4n+1) {
+        border-bottom: 3px solid #fc5f45;
+    }
+    &:nth-child(4n+2) {
+        border-bottom: 3px solid #38c695;
+    }
+    &:nth-child(4n+3) {
+        border-bottom: 3px solid #b27cf5;
+    }
+    &:nth-child(4n+4) {
+        border-bottom: 3px solid #feb960;
+    }
+}
+
+@import '../../cards/.card003/card003.scss';

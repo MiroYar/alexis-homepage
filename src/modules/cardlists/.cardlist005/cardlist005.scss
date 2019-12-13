@@ -1,0 +1,11 @@
+.#{$cardlist005} {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-column-gap: 30px;
+    max-width: 1140px;
+    padding: 0;
+    list-style: none;
+}
+
+@import '../../cards/.card005/card005.scss';

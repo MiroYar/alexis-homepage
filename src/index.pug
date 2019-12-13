@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700|Poppins:400,500,600,700|Sacramento&display=swap")
+        link(rel="stylesheet", href="//db.onlinewebfonts.com/c/d6ced0df95b7cc53e0eae88817930d08?family=Wisdom+Script+AI", type="text/css")
+        link(rel="stylesheet", href="//db.onlinewebfonts.com/c/4ff6f056f9052b835e33438a16ed81d4?family=ReceptsNFW01-Regular", type="text/css")
+        link(rel="stylesheet", href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css", type="text/css")
+        link(rel="stylesheet", href="./css/index.css")
+        title Alexis-homepage
+        include modules/block-class-names.pug
+    body
+        //- Navigation
+        include modules/nav/.nav003/nav003.pug
+        //- Header
+        include modules/headers/.header003/header003.pug
+        //- About Us
+        include modules/other-sections/.aboutus003/aboutus003.pug
+        //- Our Focus
+        include modules/other-sections/.ourfocus003/ourfocus003.pug
+        include modules/other-sections/.ourfocus-video003/ourfocus-video003.pug
+        //- Portfolio
+        include modules/other-sections/.portfolio003/portfolio003.pug
+        //- Our Team
+        include modules/other-sections/.ourteam003/ourteam003.pug
+        //- Stats
+        include modules/other-sections/.stats003/stats003.pug
+        //- Subscribe form
+        include modules/forms/.form003/form003.pug
+        //- Message form
+        include modules/forms/.form004/form004.pug
+        
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js", integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=", crossorigin="anonymous")
+        script(src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js")
+        script(src="./js/index.js")

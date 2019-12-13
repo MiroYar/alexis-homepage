@@ -1,0 +1,74 @@
+{
+    "projectName": "alexis-homepage",
+    "root": "./projects/alexis-homepage/",
+    "files": {
+        "pug": [
+            {
+                "from": "index.pug",
+                "to": ""
+            }
+        ],
+        "js": [
+            {
+                "from": [
+                    "js/index.js"
+                ],
+                "to": "js/"
+            }
+        ],
+        "jpg": [
+            {
+                "from": "modules/other-sections/.ourfocus-video003/img/bg/stats.jpg",
+                "to": "img/bg/"
+            },
+            {
+                "from": "modules/other-sections/.portfolio003/img/portfolio/item_001.jpg",
+                "to": "img/portfolio/"
+            },
+            {
+                "from": "modules/other-sections/.portfolio003/img/portfolio/item_002.jpg",
+                "to": "img/portfolio/"
+            },
+            {
+                "from": "modules/other-sections/.portfolio003/img/portfolio/item_003.jpg",
+                "to": "img/portfolio/"
+            },
+            {
+                "from": "modules/other-sections/.portfolio003/img/portfolio/item_004.jpg",
+                "to": "img/portfolio/"
+            },
+            {
+                "from": "modules/other-sections/.portfolio003/img/portfolio/item_005.jpg",
+                "to": "img/portfolio/"
+            },
+            {
+                "from": "modules/other-sections/.portfolio003/img/portfolio/item_006.jpg",
+                "to": "img/portfolio/"
+            },
+            {
+                "from": "modules/other-sections/.portfolio003/img/portfolio/item_007.jpg",
+                "to": "img/portfolio/"
+            },
+            {
+                "from": "modules/other-sections/.portfolio003/img/portfolio/item_008.jpg",
+                "to": "img/portfolio/"
+            },
+            {
+                "from": "modules/other-sections/.portfolio003/img/portfolio/item_009.jpg",
+                "to": "img/portfolio/"
+            }
+        ],
+        "json": [
+            {
+                "from": "modules/other-sections/.ourteam003/json/ourteam.json",
+                "to": "json/"
+            }
+        ],
+        "scss": [
+            {
+                "from": "sass/index.scss",
+                "to": "css/"
+            }
+        ]
+    }
+}

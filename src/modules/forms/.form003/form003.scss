@@ -1,0 +1,26 @@
+.#{$form003} {
+    display: grid;
+    justify-content: center;
+    padding: 141px 0 150px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.#{$form003}__title {
+    margin: 0;
+    padding-bottom: 45px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    color: #272727;
+}
+
+.#{$form003}__wrapper {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@import '../../textinput/.textinput003/textinput003.scss';
+
+@import '../../buttons/.button003/button003.scss';

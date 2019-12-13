@@ -1,0 +1,31 @@
+// Применяется к input, свойства задаются label.
+// УСЛОВИЯ
+// 1. - input должен стоять раньше label,
+// 2. - input должен иметь свойство required,
+// 3. - у input должно отсутсвовать свойство placeholder,
+// 4. - родительский контейнер должен иметь css свойство 'position: relative;'
+
+@mixin label-effect($height, $paddingleft, $wrapborder, $lineheight, $fontsize, $transition...) {
+    + label {
+        position: absolute;
+        top: 0;
+        left: if($paddingleft == center, 50%, 0);
+        margin: (($height - if($lineheight != 0, $lineheight, round($fontsize * 1.25))) * 0.5) (nth(leftRight($paddingleft, $lineheight, $fontsize), 1) + $wrapborder);
+        padding: 0 nth(leftRight($paddingleft, $lineheight, $fontsize), 2);
+        font-size: $fontsize;
+        line-height: if($lineheight != 0, $lineheight, round($fontsize * 1.25));
+        transition: $transition;
+    }
+    &:hover,
+    &:focus,
+    &:valid {
+        + label {
+            @content;
+        }
+    }
+}
+
+@function leftRight($paddingleft, $lineheight, $fontsize) {
+    $indent: if($lineheight != 0, $lineheight - $fontsize, round($fontsize * 0.25)) * 0.5;
+    @return if($paddingleft == center, (0, $indent), if($paddingleft > $indent, (($paddingleft - $indent), $indent), (0, $paddingleft)));
+}

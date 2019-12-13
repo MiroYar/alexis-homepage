@@ -1,0 +1,16 @@
+@mixin button-underline($height, $fontsize, $bordersize, $bordercolor, $transtime, $transtimecurve){
+    box-sizing: border-box;
+
+    $lineheight: round($fontsize * 1.25);
+
+    padding: (($height - $lineheight) * 0.5) 0 (($height - $lineheight) * 0.5 - $bordersize) 0;
+    line-height: $lineheight;
+
+    font-size: $fontsize;
+
+    transition: border-bottom $transtime $transtimecurve;
+    border-bottom: $bordersize solid transparent;
+    &:hover {
+        border-bottom: $bordersize solid $bordercolor;
+    }
+}

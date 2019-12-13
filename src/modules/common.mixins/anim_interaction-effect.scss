@@ -1,0 +1,35 @@
+@mixin interaction-effect($outlineres, $input, $hover: none, $focus: none, $valid: none) {
+    @if $outlineres {outline: none;}
+    &:hover {
+        @each $attribute, $value in $hover {
+            #{$attribute}: $value;
+        }
+    }
+    @if $input {
+        &:-webkit-autofill:hover {
+            @each $attribute, $value in $hover {
+                #{$attribute}: $value;
+            }
+        }
+    }
+    &:focus {
+        @each $attribute, $value in $focus {
+            #{$attribute}: $value;
+        }
+    }
+    @if $input {
+        &:-webkit-autofill:focus {
+            @each $attribute, $value in $focus {
+                #{$attribute}: $value;
+            }
+        }
+    }
+    @if $input {
+        &:valid,
+        &:-webkit-autofill:valid {
+            @each $attribute, $value in $valid {
+                #{$attribute}: $value;
+            }
+        }
+    }
+}

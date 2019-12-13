@@ -1,0 +1,28 @@
+@import '../../other/extends/section-title003.scss';
+@import '../../other/extends/section-text003.scss';
+
+.#{$ourfocus003} {
+    display: grid;
+    justify-content: center;
+    padding: 136px 0 150px;
+    background: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.#{$ourfocus003}__title {
+    @extend %section-title003;
+    &::before {
+        content: '02';
+    }
+}
+
+.#{$ourfocus003}__text {
+    @extend %section-text003;
+}
+
+.#{$ourfocus003}__#{$cardlist003} {
+    margin: 0 auto;
+}
+
+@import '../../cardlists/.cardlist003/cardlist003.scss';

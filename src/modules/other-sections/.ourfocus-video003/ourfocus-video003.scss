@@ -1,0 +1,40 @@
+@import '../../buttons/mixins/button-reset.scss';
+@import '../../common.mixins/anim_interaction-effect.scss';
+
+.#{$ourfocus-video003} {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    background: rgba(38, 39, 50, 0.85);
+    padding: 140px 0 145px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.#{$ourfocus-video003}__title {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 400;
+    color: #ffffff;
+    padding-bottom: 27px;
+}
+
+.#{$ourfocus-video003}__playbtn {
+    @include button-reset;
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    @include interaction-effect(true, false,
+        (transform: scale(1.01), box-shadow: (0 6px 40px 0 rgba(#38c695, 0.54), 0 6px 40px 0 rgba(#38c695, 0.54) inset)),
+        (transform: scale(1.01), box-shadow: (0 6px 40px 0 rgba(#38c695, 0.54), 0 6px 40px 0 rgba(#38c695, 0.54) inset))
+    );
+}
+
+.#{$ourfocus-video003}__text {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+    padding-top: 36px;
+}

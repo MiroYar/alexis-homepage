@@ -1,0 +1,21 @@
+mixin navmenu(navclass, navbuttons, blockpos= 'none', wrapper= false)
+    nav(class!=navclass)
+        if wrapper
+            div(class!=`${navclass}__wrapper`)
+                if blockpos === 'before'
+                    block
+                ul(class!=`${navclass}__buttons`)
+                    each i in navbuttons
+                        li(class!=`${navclass}__item`)
+                            a(href=i.link)= i.name
+                if blockpos === 'after'
+                    block
+        else
+            if blockpos === 'before'
+                block
+            ul(class!=`${navclass}__buttons`)
+                each i in navbuttons
+                    li(class!=`${navclass}__item`)
+                        a(href=i.link)= i.name
+            if blockpos === 'after'
+                block

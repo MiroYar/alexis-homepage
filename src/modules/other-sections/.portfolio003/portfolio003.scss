@@ -1,0 +1,28 @@
+@import '../../other/extends/section-title003.scss';
+@import '../../other/extends/section-text003.scss';
+
+.#{$portfolio003} {
+    display: grid;
+    justify-content: center;
+    padding: 136px 0 150px;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.#{$portfolio003}__title {
+    @extend %section-title003;
+    &::before {
+        content: '03';
+    }
+}
+
+.#{$portfolio003}__text {
+    @extend %section-text003;
+}
+
+.#{$portfolio003}__#{$cardlist004} {
+    margin: 0 auto;
+}
+
+@import '../../cardlists/.cardlist004/cardlist004.scss';

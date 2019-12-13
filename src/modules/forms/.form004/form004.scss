@@ -1,0 +1,47 @@
+@import '../../other/extends/section-title003.scss';
+@import '../../other/extends/section-text003.scss';
+
+.#{$form004} {
+    display: grid;
+    justify-content: center;
+    padding: 136px 0 150px;
+    background: #cccccc;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.#{$form004}__title {
+    @extend %section-title003;
+    &::before {
+        content: '10';
+    }
+}
+
+.#{$form004}__text {
+    @extend %section-text003;
+}
+
+.#{$form004}__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 25px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.#{$form004}__message,
+.#{$form004}__button {
+    grid-column: 1 / 3;
+}
+
+.#{$form004}__button {
+    margin-top: 25px;
+}
+
+@import '../../textinput/.textinput004/textinput004.scss';
+
+@import '../../textareas/.textarea004/textarea004.scss';
+
+@import '../../buttons/.button003/button003.scss';

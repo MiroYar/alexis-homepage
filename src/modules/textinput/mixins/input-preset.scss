@@ -1,0 +1,20 @@
+@mixin input-preset($height, $paddingleft, $bordersize, $bordercolor, $textcolor, $transition...) {
+    box-sizing: border-box;
+    padding: 0 0 0 $paddingleft;
+    border: $bordersize solid $bordercolor;
+    line-height: $height - ($bordersize * 2);
+    color: $textcolor;
+    transition: background-color 5000s ease-in-out 0s, $transition;
+    &::placeholder {
+        color: $textcolor;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        -webkit-text-fill-color: $textcolor;
+        -webkit-box-shadow: 0 0 0 1000px transparent inset;
+        box-shadow: none, 0 0 0 1000px transparent inset;
+        transition: background-color 5000s ease-in-out 0s, $transition;
+    }
+}

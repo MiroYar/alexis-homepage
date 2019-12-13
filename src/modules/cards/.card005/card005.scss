@@ -1,0 +1,76 @@
+.#{$card005} {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    box-sizing: border-box;
+    width: 262.5px;
+    height: 350px;
+    background: #ffffff;
+    border-bottom: 3px solid black;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    padding: 5px 5px 0 5px;
+}
+
+.#{$card005}_red {
+    border-bottom: 3px solid #fc5f45;
+    .#{$card005}__img-wrap {
+        background-image: linear-gradient(0.0deg, #fc5f45, black);
+    }
+    .#{$card005}__name {
+        color: #fc5f45;
+    }
+}
+
+.#{$card005}_green {
+    border-bottom: 3px solid #38c695;
+    .#{$card005}__img-wrap {
+        background-image: linear-gradient(0.0deg, #38c695, black);
+    }
+    .#{$card005}__name {
+        color: #38c695;
+    }
+}
+
+.#{$card005}_blue {
+    border-bottom: 3px solid #b27cf5;
+    .#{$card005}__img-wrap {
+        background-image: linear-gradient(0.0deg, #b27cf5, black);
+    }
+    .#{$card005}__name {
+        color: #b27cf5;
+    }
+}
+
+.#{$card005}_orange {
+    border-bottom: 3px solid #feb960;
+    .#{$card005}__img-wrap {
+        background-image: linear-gradient(0.0deg, #feb960, black);
+    }
+    .#{$card005}__name {
+        color: #feb960;
+    }
+}
+
+.#{$card005}__img-wrap {
+    height: 260px;
+    background-image: linear-gradient(0.0deg, black, black);
+}
+
+.#{$card005}__specialist {
+    display: grid;
+    grid-row-gap: 2px;
+    align-content: center;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.#{$card005}__name {
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.#{$card005}__function {
+    font-size: 13.2px;
+    font-weight: 400;
+    color: #616161;
+}

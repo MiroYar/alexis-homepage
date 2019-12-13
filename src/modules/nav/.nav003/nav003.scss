@@ -1,0 +1,70 @@
+@import '../../buttons/mixins/anim_button-underline.scss';
+
+.#{$nav003} {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.#{$nav003}_onscroll {
+    background: #ffffff;
+    box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.25);
+    .#{$nav003}__logotype {
+        > span {
+            display: inline-block;
+            color: #616161;
+        }
+    }
+    .#{$nav003}__item {
+        > a {
+            color: #616161;
+        }
+    }
+}
+
+.#{$nav003}__wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.#{$nav003}__logotype {
+    font-family: 'Wisdom Script AI';
+    font-size: 35px;
+    line-height: 90px;
+    font-weight: 400;
+    font-style: italic;
+    color: #fc5f45;
+    > span {
+        display: inline-block;
+        color: #ffffff;
+        transition: color 0.3s ease-in-out;
+    }
+}
+
+.#{$nav003}__buttons {
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    grid-column-gap: 20px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.#{$nav003}__item {
+    > a {
+        display: block;
+        @include button-underline(90px, 14px, 2px, #fc5f45, 0.3s, ease-in-out);
+        font-weight: 500;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        transition: color 0.3s ease-in-out;
+    }
+}

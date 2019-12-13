@@ -1,0 +1,125 @@
+@import '../../other/extends/section-title003.scss';
+@import '../../other/extends/section-text003.scss';
+
+.#{$ourteam003} {
+    display: grid;
+    justify-content: center;
+    padding: 136px 0 150px;
+    background: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+}
+
+.#{$ourteam003}__title {
+    @extend %section-title003;
+    &::before {
+        content: '04';
+    }
+}
+
+.#{$ourteam003}__text {
+    @extend %section-text003;
+}
+
+.about-specialist {
+    margin-top: 50px;
+    max-width: 1140px;
+    height: 350px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.about-specialist__arrow {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 60px;
+    transition: transform 0.5s ease-in-out;
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        border: 30px solid transparent;
+        border-top-width: 0px;
+        top: -40px;
+        left: 0;
+    }
+    &::before {
+        z-index: -1;
+        border-bottom: 40px solid #000000;
+        filter: blur(20px);
+        opacity: 0.1;
+    }
+    &::after {
+        border-bottom: 40px solid #ffffff;
+    }
+}
+
+.about-specialist__wrap {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-areas: 'title title' 'text contact-list';
+    justify-content: space-between;
+    align-content: start;
+    box-sizing: border-box;
+    height: 100%;
+    background: #ffffff;
+    padding: 70px 97px 70px 97px;
+    > * {
+        transition: opacity 0.5s ease-in-out;
+    }
+}
+
+.about-specialist__wrap_hidden {
+    > * {
+        opacity: 0;
+    }
+}
+
+.about-specialist__title {
+    grid-area: title;
+    padding-bottom: 18px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #272727;
+}
+
+.about-specialist__text {
+    grid-area: text;
+    max-width: 634px;
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #616161;
+}
+
+.about-specialist__contact-list {
+    position: relative;
+    grid-area: contact-list;
+    align-self: center;
+    display: block;
+    list-style: none;
+    box-sizing: border-box;
+    height: 151px;
+    padding: 14px 0 14px 26px;
+    border-left: 2px solid #efefef;
+    > svg {
+        position: absolute;
+        top: 50%;
+        transform: translate(-99px, -50%);
+    }
+}
+
+.about-specialist__contact-item {
+    > a {
+        font-size: 15px;
+        line-height: 31px;
+        font-weight: 400;
+        color: #616161;
+        text-decoration: none;
+    }
+    svg {
+        padding-right: 5px;
+    }
+}
+
+@import '../../cardlists/.cardlist005/cardlist005.scss';

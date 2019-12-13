@@ -1,0 +1,18 @@
+-
+    var nav003buttons = [
+        {name: 'About Us', link: '#'},
+        {name: 'Our Focus', link: '#'},
+        {name: 'Portfolio', link: '#'},
+        {name: 'Our Team', link: '#'},
+        {name: 'Work Steps', link: '#'},
+        {name: 'Pricing', link: '#'},
+        {name: 'Testimonials', link: '#'},
+        {name: 'Blog', link: '#'},
+        {name: 'Contact', link: '#'}
+    ]
+
+include ../mixins/navmenu.pug
+
++navmenu(nav003, nav003buttons, 'before', true)
+    div(class!=`${nav003}__logotype`) A
+        span lexis
