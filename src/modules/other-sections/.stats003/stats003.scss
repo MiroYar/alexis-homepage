@@ -1,4 +1,8 @@
 .#{$stats003} {
+    display: grid;
+    justify-content: center;
     background: url(../img/bg/stats.jpg) no-repeat center;
     padding: 145px 0 125px 0;
 }
+
+@import '../../cardlists/.cardlist006/cardlist006.scss';

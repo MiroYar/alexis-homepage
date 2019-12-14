@@ -18,10 +18,6 @@
         ],
         "jpg": [
             {
-                "from": "modules/other-sections/.ourfocus-video003/img/bg/stats.jpg",
-                "to": "img/bg/"
-            },
-            {
                 "from": "modules/other-sections/.portfolio003/img/portfolio/item_001.jpg",
                 "to": "img/portfolio/"
             },
@@ -56,6 +52,10 @@
             {
                 "from": "modules/other-sections/.portfolio003/img/portfolio/item_009.jpg",
                 "to": "img/portfolio/"
+            },
+            {
+                "from": "modules/other-sections/.stats003/img/bg/stats.jpg",
+                "to": "img/bg/"
             }
         ],
         "json": [

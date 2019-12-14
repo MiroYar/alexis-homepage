@@ -1,4 +1,8 @@
-mixin card006(classname, count)
+- function numSep(num) { num = String(num).replace(/\D/g, ''); let lim = num.length; let n1 = 0; let n2 = lim - Math.floor(lim / 3) * 3; let cond = true; let arr = []; while (cond) { cond = n2 < lim; let result = num.slice(n1, n2); if (result) arr.push(result); n1 = n2; n2 = n2 + 3; } return arr; }
+
+mixin card006(classname, count, indicator)
     if block
         block
-    span(class!=`${classname}__img-wrap`)= `${count.lenght > 3 ? count : count+`
+    p(class!=`${classname}__count`)= `${numSep(count).join(',')}+`
+    p(class!=`${classname}__indicator`)= indicator
+    div(class!=`${classname}__point`)
