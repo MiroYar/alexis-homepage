@@ -10,7 +10,7 @@
     }
 }
 
-.#{$card006}__red {
+.#{$card006}_red {
     .#{$card006}__point {
         border-color: #fc5f45;
         &::before {
@@ -19,7 +19,7 @@
     }
 }
 
-.#{$card006}__green {
+.#{$card006}_green {
     .#{$card006}__point {
         border-color: #38c695;
         &::before {
@@ -28,7 +28,7 @@
     }
 }
 
-.#{$card006}__blue {
+.#{$card006}_blue {
     .#{$card006}__point {
         border-color: #b27cf5;
         &::before {
@@ -37,7 +37,7 @@
     }
 }
 
-.#{$card006}__orange {
+.#{$card006}_orange {
     .#{$card006}__point {
         border-color: #feb960;
         &::before {

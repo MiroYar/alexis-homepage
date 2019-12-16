@@ -1,0 +1,134 @@
+.#{$card007} {
+    position: relative;
+}
+
+.#{$card007}__bg {
+    width: 556px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.#{$card007}__face {
+    position: absolute;
+    top: -50px;
+    box-sizing: border-box;
+    width: 458px;
+    height: 301px;
+    background: #ffffff;
+    border-bottom: 3px solid;
+    padding: 50px 50px 20px 125px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.05);
+    &::before {
+        position: absolute;
+        top: 33.5px;
+        left: 35px;
+        font-family: 'Libre Baskerville';
+        font-size: 50px;
+        font-weight: 700;
+        color: #e0e0e0;
+    }
+    &::after {
+        position: absolute;
+        top: 83px;
+        left: 20px;
+        content: '';
+        width: 119px;
+        height: 1px;
+        background: #e0e0e0;
+        transform: rotate(-45deg);
+    }
+}
+
+.#{$card007}_odd {
+    .#{$card007}__face {
+        left: 0;
+    }
+}
+
+.#{$card007}_even {
+    .#{$card007}__face {
+        right: 0;
+    }
+}
+
+.#{$card007}_red {
+    .#{$card007}__bg {
+        background-image: linear-gradient(0.0deg, #fc5f45 0%, #000000 100%);
+        .#{$card007}__face {
+            border-color: #fc5f45;
+        }
+    }
+}
+
+.#{$card007}_green {
+    .#{$card007}__bg {
+        background-image: linear-gradient(0.0deg, #38c695 0%, #000000 100%);
+        .#{$card007}__face {
+            border-color: #38c695;
+        }
+    }
+}
+
+.#{$card007}_blue {
+    .#{$card007}__bg {
+        background-image: linear-gradient(0.0deg, #b27cf5 0%, #000000 100%);
+        .#{$card007}__face {
+            border-color: #b27cf5;
+        }
+    }
+}
+
+.#{$card007}_orange {
+    .#{$card007}__bg {
+        background-image: linear-gradient(0.0deg, #feb960 0%, #000000 100%);
+        .#{$card007}__face {
+            border-color: #feb960;
+        }
+    }
+}
+
+.#{$card007}_one {
+    .#{$card007}__face {
+        &::before {
+            content: '01';
+        }
+    }
+}
+
+.#{$card007}_two {
+    .#{$card007}__face {
+        &::before {
+            content: '02';
+        }
+    }
+}
+
+.#{$card007}_three {
+    .#{$card007}__face {
+        &::before {
+            content: '03';
+        }
+    }
+}
+
+.#{$card007}_four {
+    .#{$card007}__face {
+        &::before {
+            content: '04';
+        }
+    }
+}
+
+.#{$card007}__title {
+    padding-bottom: 18px;
+    font-size: 25px;
+    font-weight: 400;
+    color: #272727;
+}
+
+.#{$card007}__text {
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #616161;
+}
