@@ -1,25 +1,25 @@
 @import '../../other/extends/section-title003.scss';
 @import '../../other/extends/section-text003.scss';
 
-.#{$worksteps003} {
+.#{$pricing003} {
     padding: 136px 0 150px;
-    background: #ffffff;
+    background: #f7f7f7;
     font-family: 'Poppins', sans-serif;
-    .#{$worksteps003}__#{$cardlist007} {
+    .#{$pricing003}__#{$cardlist008} {
         margin: 0 auto;
     }
 }
 
-.#{$worksteps003}__title {
+.#{$pricing003}__title {
     @extend %section-title003;
     &::before {
-        content: '05';
+        content: '06';
     }
 }
 
-.#{$worksteps003}__text {
+.#{$pricing003}__text {
     @extend %section-text003;
 }
 
 
-@import '../../cardlists/.cardlist007/cardlist007.scss';
+@import '../../cardlists/.cardlist008/cardlist008.scss';

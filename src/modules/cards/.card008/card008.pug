@@ -1,0 +1,12 @@
+mixin card008(classname, title, price, descriptval, description)
+    div(class!=`${classname}__title`)= title
+    div(class!=`${classname}__price-mark`)
+        div(class!=`${classname}__price`)= price
+        div Per Month
+    ul(class!=`${classname}__description`)
+        each val, i in descriptval
+            li
+                b= val
+                = description[i]
+    if block
+        block

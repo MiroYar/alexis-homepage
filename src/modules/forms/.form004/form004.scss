@@ -37,11 +37,9 @@
 }
 
 .#{$form004}__button {
-    margin-top: 25px;
+    margin: 25px auto 0 auto;
 }
 
 @import '../../textinput/.textinput004/textinput004.scss';
 
 @import '../../textareas/.textarea004/textarea004.scss';
-
-@import '../../buttons/.button003/button003.scss';

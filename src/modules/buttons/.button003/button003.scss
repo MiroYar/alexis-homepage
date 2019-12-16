@@ -16,7 +16,7 @@
     text-transform: uppercase;
     color: #ffffff;
 
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     @include interaction-effect(true, false,
         (transform: scale(1.01), box-shadow: (0 6px 40px 0 rgba(#fc5f45, 0.54), 0 3px 10px 0 rgba(#fff, 0.3))),
         (transform: scale(1.01), box-shadow: (0 6px 40px 0 rgba(#fc5f45, 0.54), 0 3px 10px 0 rgba(#fff, 0.3)))
@@ -29,4 +29,24 @@
 
 .#{$button003}_wider-ten-px {
     width: 190px;
+}
+
+.#{$button003}_green {
+    background-color: transparent;
+    border-color: #38c695;
+    color: #38c695;
+    @include interaction-effect(true, false,
+        (transform: scale(1.01), box-shadow: (0 6px 40px 0 rgba(#38c695, 0.54), 0 3px 10px 0 rgba(#fff, 0.3)), background-color: #38c695, color: #ffffff),
+        (transform: scale(1.01), box-shadow: (0 6px 40px 0 rgba(#38c695, 0.54), 0 3px 10px 0 rgba(#fff, 0.3)), background-color: #38c695, color: #ffffff)
+    );
+}
+
+.#{$button003}_blue {
+    background-color: transparent;
+    border-color: #b27cf5;
+    color: #b27cf5;
+    @include interaction-effect(true, false,
+        (transform: scale(1.01), box-shadow: (0 6px 40px 0 rgba(#b27cf5, 0.54), 0 3px 10px 0 rgba(#fff, 0.3)), background-color: #b27cf5, color: #ffffff),
+        (transform: scale(1.01), box-shadow: (0 6px 40px 0 rgba(#b27cf5, 0.54), 0 3px 10px 0 rgba(#fff, 0.3)), background-color: #b27cf5, color: #ffffff)
+    );
 }

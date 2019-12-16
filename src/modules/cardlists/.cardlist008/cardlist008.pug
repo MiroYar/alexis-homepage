@@ -1,0 +1,17 @@
+include ../../cards/.card008/card008.pug
+
+li(class!=`${cardlist008}__item ${card008} ${card008}_green`)
+    +card008(card008, 'Starter', '$ 125',
+    ['200GB', '20', '2TB', '✓', '✓', '✓'],
+    [' Online Storage', ' Files Per Day', ' Monthly Bandwidth', ' Secure Platform', ' 24/7 Customer Support', ' Fast & Reliable'])
+        a(class!=`${card008}__${button003} ${button003} ${button003}_green`) Get Started
+li(class!=`${cardlist008}__item ${card008} ${card008}_red`)
+    +card008(card008, 'Ultimate', '$ 195',
+    ['800GB', 'Unlimited', '10TB', '✓', '✓', '✓'],
+    [' Online Storage', ' Files Per Day', ' Monthly Bandwidth', ' Secure Platform', ' 24/7 Customer Support', ' Fast & Reliable'])
+        a(class!=`${card008}__${button003} ${button003}`) Get Started
+li(class!=`${cardlist008}__item ${card008} ${card008}_blue`)
+    +card008(card008, 'Professional', '$ 145',
+    ['200GB', '20', '2TB', '✓', '✓', '✓'],
+    [' Online Storage', ' Files Per Day', ' Monthly Bandwidth', ' Secure Platform', ' 24/7 Customer Support', ' Fast & Reliable'])
+        a(class!=`${card008}__${button003} ${button003} ${button003}_blue`) Get Started
