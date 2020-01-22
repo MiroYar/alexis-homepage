@@ -1,0 +1,11 @@
+.#{$cardlist009} {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 65px;
+    list-style: none;
+    padding: 0 20px 145px;
+    max-width: 1140px;
+}
+
+@import '../../cards/.card009/card009.scss';

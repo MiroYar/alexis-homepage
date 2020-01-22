@@ -1,0 +1,17 @@
+@mixin scrolled($scrlWH, $psElemStyle) {
+    margin-right: 0 - map-get($scrlWH, w);
+    padding-right: map-get($scrlWH, w);
+    overflow: hidden;
+
+    &::-webkit-scrollbar {
+        width: map-get($scrlWH, w);
+        height: if(map-get($scrlWH, h), map-get($scrlWH, h), 0);
+    }
+    @each $psElement, $styles in $psElemStyle {
+        &::-webkit-scrollbar-#{$psElement} {
+            @each $attribute, $value in $styles {
+                #{$attribute}: $value;
+            }
+        }
+    }
+}

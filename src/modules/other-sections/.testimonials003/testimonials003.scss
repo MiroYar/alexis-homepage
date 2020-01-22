@@ -1,0 +1,25 @@
+.#{$testimonials003} {
+    padding: 136px 0 150px;
+    background: rgba(38,39,50,0.85);
+    font-family: 'Poppins', sans-serif;
+}
+
+.#{$testimonials003}__title {
+    @extend %section-title003;
+    color: #ffffff;
+    &::before {
+        content: '07';
+        color: #5d5d62;
+    }
+}
+
+.#{$testimonials003}__text {
+    @extend %section-text003;
+    color: #ffffff;
+}
+
+.#{$testimonials003}__#{$feedbackpanel003} {
+    margin: 0 auto;
+}
+
+@import '../../feedbackpanels/.feedbackpanel003/feedbackpanel003.scss';

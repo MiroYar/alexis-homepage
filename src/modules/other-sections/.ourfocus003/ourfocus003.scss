@@ -1,6 +1,3 @@
-@import '../../other/extends/section-title003.scss';
-@import '../../other/extends/section-text003.scss';
-
 .#{$ourfocus003} {
     display: grid;
     justify-content: center;
@@ -12,6 +9,7 @@
 
 .#{$ourfocus003}__title {
     @extend %section-title003;
+    @extend %section-title003_color;
     &::before {
         content: '02';
     }
@@ -19,6 +17,7 @@
 
 .#{$ourfocus003}__text {
     @extend %section-text003;
+    @extend %section-text003_color;
 }
 
 .#{$ourfocus003}__#{$cardlist003} {

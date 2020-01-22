@@ -1,0 +1,18 @@
+.#{$cardlist010} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 25px;
+    grid-template-areas:
+        'first .'
+        'first .'
+        'first .';
+    list-style: none;
+    padding: 0 20px;
+    max-width: 1140px;
+    li:first-child {
+        grid-area: first;
+    }
+}
+
+@import '../../cards/.card010/card010.scss';

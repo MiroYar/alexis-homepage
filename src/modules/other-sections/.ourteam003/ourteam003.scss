@@ -1,6 +1,3 @@
-@import '../../other/extends/section-title003.scss';
-@import '../../other/extends/section-text003.scss';
-
 .#{$ourteam003} {
     display: grid;
     justify-content: center;
@@ -11,6 +8,7 @@
 
 .#{$ourteam003}__title {
     @extend %section-title003;
+    @extend %section-title003_color;
     &::before {
         content: '04';
     }
@@ -18,6 +16,7 @@
 
 .#{$ourteam003}__text {
     @extend %section-text003;
+    @extend %section-text003_color;
 }
 
 .about-specialist {

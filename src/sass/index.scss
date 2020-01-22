@@ -1,8 +1,7 @@
-html, body {
+html,
+body {
     margin: 0;
 }
-
-
 
 @import '../modules/block-class-names.scss';
 
@@ -18,8 +17,18 @@ html, body {
 @import '../modules/other-sections/.stats003/stats003.scss';
 @import '../modules/other-sections/.worksteps003/worksteps003.scss';
 @import '../modules/other-sections/.pricing003/pricing003.scss';
+@import '../modules/other-sections/.testimonials003/testimonials003.scss';
+@import '../modules/other-sections/.chooseus003/chooseus003.scss';
+@import '../modules/other-sections/.ourblog003/ourblog003.scss';
+
+@import '../modules/footers/.footer003/footer003.scss';
 
 @import '../modules/forms/.form003/form003.scss';
 @import '../modules/forms/.form004/form004.scss';
 
 @import '../modules/buttons/.button003/button003.scss';
+
+@import '../modules/other/extends/section-title003.scss';
+@import '../modules/other/extends/section-title003_color.scss';
+@import '../modules/other/extends/section-text003.scss';
+@import '../modules/other/extends/section-text003_color.scss';

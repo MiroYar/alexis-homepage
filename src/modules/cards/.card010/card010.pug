@@ -1,0 +1,9 @@
+mixin card010(classname, author, date, title, text, img)
+    img(src=`${img || '#'}`, alt="FirstBlog")
+    div(class!=`${classname}__wrap`)
+        div(class!=`${classname}__info`)
+            div(class!=`${classname}__author`)= author
+            div(class!=`${classname}__date`)= date
+        div(class!=`${classname}__title`)= title
+        p(class!=`${classname}__text`)= text
+            a(href="#") Read Full Article »

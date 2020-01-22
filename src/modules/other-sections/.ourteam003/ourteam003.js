@@ -1,41 +1,14 @@
-let ajax = (method, url, data, done) => {
-    const request = new XMLHttpRequest();
+import { ajax } from '../../ajax';
 
-    request.addEventListener('readystatechange', () => {
-        if(request.readyState === 4 && request.status === 200) {       
-            done(response = request.response);
-        }
-    });
-
-    switch (url.match(/[\d|\w]+$/g)[0]) {
-        case 'json':
-            request.responseType =	"json";
-            break;
-    }
-
-    switch (method) {
-        case 'GET':
-            url = `${url}?${data}`;
-            data = '';
-            break;
-    }
-
-    request.open(method, url);
-
-    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-    request.send(data);
-}
-
-function setArrowPositionXRelativeToCard(arrow, card){
-    cardParent = card.parentElement;
-    coorCard = card.getBoundingClientRect();
-    coorCardPar = cardParent.getBoundingClientRect();
-    x = coorCard.left - coorCardPar.left + (card.offsetWidth / 2) - (arrow.offsetWidth / 2);
+function setArrowPositionXRelativeToCard(arrow, card) {
+    const cardParent = card.parentElement;
+    const coorCard = card.getBoundingClientRect();
+    const coorCardPar = cardParent.getBoundingClientRect();
+    const x = coorCard.left - coorCardPar.left + (card.offsetWidth / 2) - (arrow.offsetWidth / 2);
     arrow.style.transform = `translateX(${x}px)`;
 }
 
-function setAboutSpecialist(specialistName, data, event){
+function setAboutSpecialist(specialistName, data, event) {
     const ABOUT_SPECIALIST_WRAP = event.currentTarget;
 
     const TITLE = ABOUT_SPECIALIST_WRAP.querySelector('.about-specialist__title');
@@ -50,10 +23,10 @@ function setAboutSpecialist(specialistName, data, event){
     for (let i = 0; i < CONTACTS.length; i++) {
         const contactsItem = CONTACTS[i];
         contactsItem.classList.forEach(className => {
-            if (/contact-item__/.test(className)){
-                contactName = className.replace(/contact-item__/, '');
-                a = contactsItem.getElementsByTagName('a');
-                if (data.contacts.hasOwnProperty(contactName)){
+            if (/contact-item__/.test(className)) {
+                const contactName = className.replace(/contact-item__/, '');
+                const a = contactsItem.getElementsByTagName('a');
+                if (data.contacts.hasOwnProperty(contactName)) {
                     contactsItem.style.display = '';
                     a[0].href = `${data.contacts[contactName]}`;
                 }
@@ -70,7 +43,7 @@ function setAboutSpecialist(specialistName, data, event){
 }
 
 function setFocusEventForCard(arrow, specialistsData, aboutSpecialistWrap, event) {
-    card = event.target;
+    let card = event.target;
 
     setArrowPositionXRelativeToCard(arrow, card);
 
@@ -78,30 +51,26 @@ function setFocusEventForCard(arrow, specialistsData, aboutSpecialistWrap, event
     const DATA = specialistsData[`${SPECIALIST_NAME}`];
 
     // Присвоение класса блоку с описанием о специалисте для скрытия описания с последующего его редактирования и появления вновь.
-    aboutSpecialistWrap.addEventListener('transitionend', setAboutSpecialist.bind(null, SPECIALIST_NAME, DATA), {once: true});
+    aboutSpecialistWrap.addEventListener('transitionend', setAboutSpecialist.bind(null, SPECIALIST_NAME, DATA), { once: true });
     aboutSpecialistWrap.classList.add('about-specialist__wrap_hidden');
 }
 
-function setEventsForTeamSection(){
+export function setEventsForTeamSection() {
     const OURTEAM = document.querySelector('.ourteam');
     const ABOUT_SPECIALIST = OURTEAM.querySelector('.about-specialist');
     const ARROW = ABOUT_SPECIALIST.querySelector('.about-specialist__arrow');
     const ABOUT_SPECIALIST_WRAP = ABOUT_SPECIALIST.querySelector('.about-specialist__wrap');
 
     // AJAX запрос для получения данных о специалистах.
-    ajax('GET',
-        './json/ourteam.json',
-        '',
+    ajax('./json/ourteam.json',
         (response) => {
             const SPECIALISTS_DATA = response;
 
             // Выбор карты специалиста по умолчанию.
-            setFocusEventForCard(ARROW, SPECIALISTS_DATA, ABOUT_SPECIALIST_WRAP, {target: OURTEAM.querySelector('.team-card')});
+            setFocusEventForCard(ARROW, SPECIALISTS_DATA, ABOUT_SPECIALIST_WRAP, { target: OURTEAM.querySelector('.team-card') });
 
             // Назначение действий при выборе карты специалиста.
             OURTEAM.addEventListener('focusin', setFocusEventForCard.bind(null, ARROW, SPECIALISTS_DATA, ABOUT_SPECIALIST_WRAP));
         }
     );
 }
-
-window.addEventListener('load', setEventsForTeamSection);

@@ -1,0 +1,120 @@
+.#{$card010} {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid;
+    > img {
+        display: none;
+    }
+}
+
+.#{$card010}_first {
+    > img {
+        display: block;
+    }
+    .#{$card010}__date {
+        opacity: 0.7;
+        color: #ffffff;
+    }
+    .#{$card010}__title {
+        padding-bottom: 16px;
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .#{$card010}__wrap {
+        position: relative;
+        padding-top: 22px;
+    }
+    .#{$card010}__info {
+        position: absolute;
+        top: -50px;
+    }
+}
+
+.#{$card010}_red {
+    border-color: #fc5f45;
+    .#{$card010}__author {
+        color: #fc5f45;
+    }
+    .#{$card010}__text {
+        > a {
+            color: #fc5f45;
+        }
+    }
+}
+
+.#{$card010}_green {
+    border-color: #38c695;
+    .#{$card010}__author {
+        color: #38c695;
+    }
+    .#{$card010}__text {
+        > a {
+            color: #38c695;
+        }
+    }
+}
+
+.#{$card010}_blue {
+    border-color: #b27cf5;
+    .#{$card010}__author {
+        color: #b27cf5;
+    }
+    .#{$card010}__text {
+        > a {
+            color: #b27cf5;
+        }
+    }
+}
+
+.#{$card010}_orange {
+    border-color: #feb960;
+    .#{$card010}__author {
+        color: #feb960;
+    }
+    .#{$card010}__text {
+        > a {
+            color: #feb960;
+        }
+    }
+}
+
+.#{$card010}__wrap {
+    padding: 28px 35px;
+}
+
+.#{$card010}__info {
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.#{$card010}__author {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.#{$card010}__date {
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 23px;
+    font-weight: 400;
+}
+
+.#{$card010}__title {
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #272727;
+}
+
+.#{$card010}__text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #616161;
+    > a {
+        padding-left: 5px;
+        font-weight: 500;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,38 @@
+.#{$chooseus003} {
+    padding: 136px 0 150px;
+    background: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    .#{$chooseus003}__#{$cardlist009} {
+        margin: 0 auto;
+    }
+}
+
+.#{$chooseus003}__title {
+    @extend %section-title003;
+    @extend %section-title003_color;
+    &::before {
+        content: '08';
+    }
+}
+
+.#{$chooseus003}__text {
+    @extend %section-text003;
+    @extend %section-text003_color;
+}
+
+.#{$chooseus003}__calltoaction {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.#{$chooseus003}__calltoaction-text {
+    margin: 0;
+    padding-right: 25px;
+    font-size: 25px;
+    line-height: 50px;
+    font-weight: 400;
+    color: #272727;
+}
+
+@import '../../cardlists/.cardlist009/cardlist009.scss';

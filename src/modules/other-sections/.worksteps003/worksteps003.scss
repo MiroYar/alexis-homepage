@@ -1,6 +1,3 @@
-@import '../../other/extends/section-title003.scss';
-@import '../../other/extends/section-text003.scss';
-
 .#{$worksteps003} {
     padding: 136px 0 150px;
     background: #ffffff;
@@ -12,6 +9,7 @@
 
 .#{$worksteps003}__title {
     @extend %section-title003;
+    @extend %section-title003_color;
     &::before {
         content: '05';
     }
@@ -19,6 +17,7 @@
 
 .#{$worksteps003}__text {
     @extend %section-text003;
+    @extend %section-text003_color;
 }
 
 

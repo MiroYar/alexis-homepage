@@ -1,6 +1,3 @@
-@import '../../other/extends/section-title003.scss';
-@import '../../other/extends/section-text003.scss';
-
 .#{$portfolio003} {
     display: grid;
     justify-content: center;
@@ -12,6 +9,7 @@
 
 .#{$portfolio003}__title {
     @extend %section-title003;
+    @extend %section-title003_color;
     &::before {
         content: '03';
     }
@@ -19,6 +17,7 @@
 
 .#{$portfolio003}__text {
     @extend %section-text003;
+    @extend %section-text003_color;
 }
 
 .#{$portfolio003}__#{$cardlist004} {

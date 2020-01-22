@@ -1,0 +1,6 @@
+mixin card009(classname, title, text)
+    if block
+        block
+    div(class!=`${classname}__title`)!= title
+    div(class!=`${classname}__text`)= text
+    

@@ -1,0 +1,23 @@
+.#{$ourblog003} {
+    padding: 136px 0 150px;
+    background: #f7f7f7;
+    font-family: 'Poppins', sans-serif;
+    .#{$ourblog003}__#{$cardlist010} {
+        margin: 0 auto;
+    }
+}
+
+.#{$ourblog003}__title {
+    @extend %section-title003;
+    @extend %section-title003_color;
+    &::before {
+        content: '09';
+    }
+}
+
+.#{$ourblog003}__text {
+    @extend %section-text003;
+    @extend %section-text003_color;
+}
+
+@import '../../cardlists/.cardlist010/cardlist010.scss';

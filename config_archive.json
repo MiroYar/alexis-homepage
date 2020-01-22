@@ -56,11 +56,39 @@
             {
                 "from": "modules/other-sections/.stats003/img/bg/stats.jpg",
                 "to": "img/bg/"
+            },
+            {
+                "from": "modules/feedbackpanels/.feedbackpanel003/img/clients/client_img.jpg",
+                "to": "img/clients/"
+            },
+            {
+                "from": "modules/feedbackpanels/.feedbackpanel003/img/clients/img01.jpg",
+                "to": "img/clients/"
+            },
+            {
+                "from": "modules/feedbackpanels/.feedbackpanel003/img/clients/img02.jpg",
+                "to": "img/clients/"
+            },
+            {
+                "from": "modules/feedbackpanels/.feedbackpanel003/img/clients/img03.jpg",
+                "to": "img/clients/"
+            },
+            {
+                "from": "modules/feedbackpanels/.feedbackpanel003/img/clients/img04.jpg",
+                "to": "img/clients/"
+            },
+            {
+                "from": "modules/other-sections/.ourblog003/img/blogs/blog_img001.jpg",
+                "to": "img/blogs/"
             }
         ],
         "json": [
             {
                 "from": "modules/other-sections/.ourteam003/json/ourteam.json",
+                "to": "json/"
+            },
+            {
+                "from": "modules/feedbackpanels/.feedbackpanel003/json/clientfeedback.json",
                 "to": "json/"
             }
         ],
