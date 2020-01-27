@@ -1,11 +1,9 @@
 .#{$cardlist006} {
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-column-gap: 30px;
-    max-width: 1140px;
-    padding: 0;
-    list-style: none;
+    @extend %four-card-list;
+}
+
+.#{$cardlist006}__item {
+    @extend %four-card-item;
 }
 
 @import '../../cards/.card006/card006.scss';

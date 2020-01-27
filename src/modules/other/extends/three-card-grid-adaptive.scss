@@ -1,0 +1,17 @@
+.grid-list {
+    --width: 1140px;
+    --space: 30px;
+    --columnCount: calc(24 / 6);
+    --columnWidth: calc(
+        (var(--width) - var(--space) * (var(--columnCount) - 1)) / var(--columnCount)
+    );
+    display: grid;
+    grid-template-columns: repeat(auto-fill, var(--columnWidth));
+    grid-column-gap: var(--space);
+    grid-row-gap: var(--space);
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--width);
+    list-style: none;
+}

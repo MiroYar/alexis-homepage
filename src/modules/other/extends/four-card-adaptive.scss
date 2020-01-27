@@ -1,0 +1,15 @@
+%four-card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -15px auto;
+    padding: 0 5px;
+    max-width: 1170px;
+    list-style: none;
+}
+
+%four-card-item {
+    box-sizing: border-box;
+    margin: 15px;
+    width: 262.5px;
+}

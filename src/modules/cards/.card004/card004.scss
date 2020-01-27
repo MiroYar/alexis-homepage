@@ -1,4 +1,29 @@
 .#{$card004} {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 370px;
+    height: 298px;
+    &:hover,
+    &:focus {
+        .#{$card004}__wrap {
+            padding: 5px;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+            .#{$card004}__img-wrap {
+                height: calc(100% - 64px);
+                > svg {
+                    opacity: 1;
+                }
+                .#{$card004}__img {
+                    filter: brightness(75%);
+                }
+            }
+        }
+    }
+}
+
+.#{$card004}__wrap {
+    padding: 0px;
     display: block;
     width: 360px;
     height: 288px;
@@ -7,20 +32,6 @@
     text-decoration: none;
     outline: none;
     transition: 0.3s ease-in-out;
-    &:hover,
-    &:focus {
-        padding: 5px;
-        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
-        .#{$card004}__img-wrap {
-            height: calc(100% - 64px);
-            > svg {
-                opacity: 1;
-            }
-            .#{$card004}__img {
-                filter: brightness(75%);
-            }
-        }
-    }
 }
 
 .#{$card004}__img-wrap {
@@ -32,7 +43,16 @@
     width: 100%;
     height: 100%;
     border-bottom: 3px solid transparent;
-    border-image: linear-gradient(90deg,#fc5f45 25%, #38c695 25%, #38c695 50%, #b27cf5 50%, #b27cf5 75%,#feb960 75%,#feb960 100%);
+    border-image: linear-gradient(
+        90deg,
+        #fc5f45 25%,
+        #38c695 25%,
+        #38c695 50%,
+        #b27cf5 50%,
+        #b27cf5 75%,
+        #feb960 75%,
+        #feb960 100%
+    );
     border-image-slice: 1;
     overflow: hidden;
     transition: 0.3s ease-in-out;
